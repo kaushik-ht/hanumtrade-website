@@ -20,7 +20,7 @@ a{color:inherit}
 .top{background:var(--black);position:sticky;top:0;z-index:5;border-bottom:1px solid #26302a}
 .top .wrap{display:flex;justify-content:space-between;align-items:center;min-height:68px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--white);font:700 1.3rem Fraunces,serif}
-.brand img{height:42px;width:auto;display:block}
+.brand img{width:46px;height:46px;flex:none;border-radius:50%;object-fit:cover;background:var(--white);border:2px solid var(--gold);display:block}
 .brand b{color:var(--gold)}
 nav{display:flex;align-items:center;gap:1.5rem}
 nav a{color:#dfe5e0;text-decoration:none;font-weight:500;font-size:.98rem}
@@ -122,7 +122,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Hanum Trade home"><img src="logo.jpg" alt="" onerror="this.style.display='none'">Hanum<b>Trade</b></a>
+  <a class="brand" href="#top" aria-label="Hanum Trade home"><img src="logo.png?v=2" alt="" onerror="this.style.display='none'">Hanum<b>Trade</b></a>
   <nav aria-label="Main"><a href="#product">Product</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a class="cta" href="#contact">Request a quote</a></nav>
 </div><div class="prog" id="prog"></div></header>
 
@@ -201,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
     <h2 class="t">Request a quote</h2>
     <p class="intro">Share your required quantity and destination. We reply with pricing and specifications.</p>
     <p><b>Phone and WhatsApp</b><a href="tel:+916309678187">+91 63096 78187</a></p>
-    <p><b>Email</b><a href="mailto:kaushik@hanumtrade.org">kaushik@hanumtrade.org</a></p>
+    <p><b>Email</b><a href="mailto:info@hanumtrade.org">info@hanumtrade.org</a></p>
     <p><b>Location</b>Hyderabad, Telangana, India</p>
   </div>
   <form id="f">
@@ -211,7 +211,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
     <div><label for="q">Quantity needed</label><input id="q" placeholder="e.g. 100 kg per month"></div>
     <div class="full"><label for="m">Message</label><textarea id="m" placeholder="Your requirements, timeline, packing needs"></textarea></div>
     <div class="full"><button type="submit">Send enquiry by email</button></div>
-    <p class="note full">This opens your email app with the enquiry filled in, addressed to @hanumtrade.org.</p>
+    <p class="note full">This opens your email app with the enquiry filled in, addressed to info@hanumtrade.org.</p>
   </form>
 </div></section>
 </main>
@@ -224,7 +224,7 @@ document.getElementById("f").addEventListener("submit",function(e){
   e.preventDefault();
   var v=function(i){return document.getElementById(i).value.trim()};
   var body="Name: "+v("n")+"\nCompany: "+v("c")+"\nCountry: "+v("co")+"\nQuantity: "+v("q")+"\n\n"+v("m");
-  location.href="mailto:@hanumtrade.org?subject="+encodeURIComponent("Curcumin 95% enquiry from "+v("c"))+"&body="+encodeURIComponent(body);
+  location.href="mailto:info@hanumtrade.org?subject="+encodeURIComponent("Curcumin 95% enquiry from "+v("c"))+"&body="+encodeURIComponent(body);
 });
 
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
