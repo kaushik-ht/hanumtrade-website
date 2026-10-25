@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hanum Trade | Curcumin 95% Extract Supplier, Hyderabad, India</title>
-<meta name="description" content="Hanum Trade exports Curcumin 95% extract from Hyderabad, India to pharmaceutical and nutraceutical companies, importers and distributors in the USA, Europe, Vietnam and Japan.">
+<meta name="description" content="Hanum Trade exports Curcumin 95% extract in powder or granule form from Hyderabad, India to pharmaceutical and nutraceutical companies, importers and distributors in the USA, Europe, Vietnam and Japan.">
 <link rel="icon" href="logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,8 +67,8 @@ section h2.t{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--green);margin-bott
 form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 form .full{grid-column:1/-1}
 label{display:block;font-size:.92rem;color:#c7d0ca;margin-bottom:.3rem}
-input,textarea{width:100%;font:inherit;color:var(--white);background:#161c18;border:1px solid #38443c;border-radius:4px;padding:.75rem .9rem}
-input:focus,textarea:focus{border-color:var(--gold);outline:none}
+input,select,textarea{width:100%;font:inherit;color:var(--white);background:#161c18;border:1px solid #38443c;border-radius:4px;padding:.75rem .9rem}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
 textarea{min-height:120px;resize:vertical}
 form button{cursor:pointer;font:inherit;font-weight:700;border:0;border-radius:4px;background:var(--gold);color:var(--black);padding:.95rem 1.6rem}
 form button:hover{background:var(--gold2)}
@@ -111,6 +111,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
 .routes .dn text{fill:#fff;font:500 15px Manrope,sans-serif}
 .routes .dn{cursor:pointer}.routes .dn:hover circle,.routes .dn:focus circle{r:13;fill:var(--gold)}
 .routes .hl{fill:var(--gold2);font:700 16px Fraunces,serif}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+select option{background:#161c18;color:#fff}
 .cap{margin:1rem 0 0;color:var(--muted);font-size:.95rem}
 .wa{position:fixed;right:1.1rem;bottom:1.1rem;z-index:6;background:#25a35a;color:#fff;text-decoration:none;font-weight:700;padding:.75rem 1.2rem;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .25s}
 .wa:hover{transform:translateY(-3px) scale(1.04)}
@@ -140,7 +142,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
     <table>
       <tr><th>Source</th><td>Curcuma longa (turmeric root)</td></tr>
       <tr><th>Curcuminoids</th><td>95% minimum</td></tr>
-      <tr><th>Form</th><td>Powder</td></tr>
+      <tr><th>Form</th><td>Powder, or granules on request</td></tr>
       <tr><th>Used in</th><td>Supplements, formulations, ingredients</td></tr>
       <tr><th>Origin</th><td>India</td></tr>
     </table>
@@ -153,7 +155,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
   <h2 class="t">One product, supplied with care</h2>
   <p class="intro">We focus on curcumin 95% extract, so every enquiry gets clear answers on quality, quantity and delivery.</p>
   <div class="cols">
-    <div class="card"><h3>High-purity extract</h3><p>Curcumin standardised to 95% curcuminoids, made for pharmaceutical and nutraceutical use.</p></div>
+    <div class="card"><h3>High-purity extract</h3><p>Curcumin standardised to 95% curcuminoids for pharmaceutical and nutraceutical use. Supplied as powder, or as granules if your process needs them.</p></div>
     <div class="card"><h3>Specification on request</h3><p>Tell us your requirement and we send the specification sheet and available documentation for your review.</p></div>
     <div class="card"><h3>Export-ready supply</h3><p>Quantities, packing and shipping terms agreed to match your market and import requirements.</p></div>
     <div class="card"><h3>Direct communication</h3><p>You deal directly with us from enquiry to shipment, with quick replies by email or WhatsApp.</p></div>
@@ -210,6 +212,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem
     <div><label for="c">Company</label><input id="c" required autocomplete="organization"></div>
     <div><label for="co">Country</label><input id="co" required autocomplete="country-name"></div>
     <div><label for="q">Quantity needed</label><input id="q" placeholder="e.g. 100 kg per month"></div>
+    <div class="full"><label for="fm">Form needed</label><select id="fm"><option>Powder</option><option>Granules</option><option>Not sure yet</option></select></div>
     <div class="full"><label for="m">Message</label><textarea id="m" placeholder="Your requirements, timeline, packing needs"></textarea></div>
     <div class="full"><button type="submit">Send enquiry by email</button></div>
     <p class="note full">This opens your email app with the enquiry filled in, addressed to kaushik@hanumtrade.org.</p>
@@ -224,7 +227,7 @@ document.getElementById("y").textContent=new Date().getFullYear();
 document.getElementById("f").addEventListener("submit",function(e){
   e.preventDefault();
   var v=function(i){return document.getElementById(i).value.trim()};
-  var body="Name: "+v("n")+"\nCompany: "+v("c")+"\nCountry: "+v("co")+"\nQuantity: "+v("q")+"\n\n"+v("m");
+  var body="Name: "+v("n")+"\nCompany: "+v("c")+"\nCountry: "+v("co")+"\nQuantity: "+v("q")+"\nForm: "+v("fm")+"\n\n"+v("m");
   location.href="mailto:kaushik@hanumtrade.org?subject="+encodeURIComponent("Curcumin 95% enquiry from "+v("c"))+"&body="+encodeURIComponent(body);
 });
 
