@@ -48,6 +48,25 @@ nav a:hover{color:var(--gold2)}
 section{padding:5rem 0}
 section h2.t{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--green);margin-bottom:.8rem}
 .intro{max-width:60ch;color:var(--muted);margin:0 0 2.5rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:3.5rem;align-items:start}
+.about p{margin:0 0 1.1rem;max-width:62ch}
+.vals{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+.val{border-left:3px solid var(--gold);padding:.2rem 0 .2rem 1rem}
+.val h3{font-size:1.08rem;color:var(--green)}.val p{margin:.2rem 0 0;font-size:.95rem;color:var(--muted)}
+.fcard{background:var(--green);color:#e6efe9;border-radius:6px;padding:2rem;border-top:5px solid var(--gold);box-shadow:0 18px 40px rgba(15,61,42,.2)}
+.fcard .av{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--black);color:var(--gold2);border:2px solid var(--gold);font:700 2rem Fraunces,serif;margin-bottom:1rem}
+.fcard .fp{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:4px;border:2px solid var(--gold);margin-bottom:1.3rem}
+.fcard h3{font-size:1.5rem;color:var(--white)}
+.fcard small{display:block;color:var(--gold2);font-weight:500;margin:.2rem 0 1rem}
+.fcard p{margin:0 0 .8rem;font-size:.98rem;line-height:1.6;max-width:none}
+.mv{background:var(--black);color:var(--white)}
+.mv h2.t{color:var(--gold2)}
+.mvg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.panel{border:1px solid #2c3a31;border-top:4px solid var(--gold);background:linear-gradient(160deg,#13201a,#0c0f0d);padding:2rem;border-radius:6px;transition:transform .25s,border-color .25s}
+.panel:hover{transform:translateY(-5px);border-color:var(--gold)}
+.panel small{color:var(--gold2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.panel h3{font-size:1.6rem;margin:.6rem 0 .8rem;color:var(--white)}
+.panel p{margin:0;color:#c3cec7}
 .c3{grid-template-columns:repeat(3,1fr)}
 .alt{background:var(--mist)}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
@@ -117,7 +136,8 @@ select option{background:#161c18;color:#fff}
 .cap{margin:1rem 0 0;color:var(--muted);font-size:.95rem}
 .wa{position:fixed;right:1.1rem;bottom:1.1rem;z-index:6;background:#25a35a;color:#fff;text-decoration:none;font-weight:700;padding:.75rem 1.2rem;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .25s}
 .wa:hover{transform:translateY(-3px) scale(1.04)}
-@media(max-width:860px){.c3{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.c3{grid-template-columns:1fr 1fr}.about,.mvg{grid-template-columns:1fr}.about{gap:2rem}}
+@media(max-width:560px){.vals{grid-template-columns:1fr}}
 @media(max-width:560px){.c3{grid-template-columns:1fr}}
 @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}.steps:before{display:none}.mol{opacity:.12}}
 @media(prefers-reduced-motion:reduce){.mol,.mol path,.mol circle,.routes .ln,.routes .ring{animation:none}.mol path{stroke-dashoffset:0}.mol circle{opacity:1}.js .rv{opacity:1;transform:none;transition:none}.meter i{transition:none}}
@@ -129,7 +149,7 @@ select option{background:#161c18;color:#fff}
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="#top" aria-label="Hanum Trade home"><img src="logo.png?v=4" alt="" onerror="this.style.display='none'">Hanum<b>Trade</b></a>
-  <nav aria-label="Main"><a href="#product">Product</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a class="cta" href="#contact">Request a quote</a></nav>
+  <nav aria-label="Main"><a href="#product">Product</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a href="#about">About</a><a class="cta" href="#contact">Request a quote</a></nav>
 </div><div class="prog" id="prog"></div></header>
 
 <main id="top">
@@ -204,6 +224,36 @@ select option{background:#161c18;color:#fff}
   </div>
 </div></section>
 
+<section id="about"><div class="wrap about">
+  <div>
+    <h2 class="t">About Hanum Trade</h2>
+    <p>Hanum Trade is an export company based in Hyderabad, India, founded in 2026 to supply high-purity curcumin 95% extract to pharmaceutical, nutraceutical, cosmetic, and food and beverage businesses around the world.</p>
+    <p>We focus on a single product so that we can do it exceptionally well: dependable quality, honest dealing, and service that makes importing simple. India is the home of turmeric, and we are proud to carry that heritage to buyers across the globe.</p>
+    <div class="vals">
+      <div class="val"><h3>Integrity</h3><p>Honest dealing, with no compromise on what we promise.</p></div>
+      <div class="val"><h3>Quality</h3><p>A standard we stand behind on every order.</p></div>
+      <div class="val"><h3>Service</h3><p>Smooth, responsive support from enquiry to shipment.</p></div>
+      <div class="val"><h3>Communication</h3><p>Clear updates, so you always know where your order stands.</p></div>
+    </div>
+  </div>
+  <aside class="fcard" aria-label="About the founder">
+    <img class="fp" src="founder.jpg" alt="Kaushik, founder of Hanum Trade" width="640" height="800" loading="lazy">
+    <h3>Kaushik</h3><small>Founder, Hanum Trade</small>
+    <p>Kaushik holds a Master of Engineering in Software Engineering from the University of Maryland, College Park.</p>
+    <p>Before founding Hanum Trade, he worked in data engineering for a pharmaceutical client, where he saw how seriously the industry treats quality, compliance and documentation.</p>
+    <p>He brings that discipline and a systems mindset to every order, from first enquiry to shipment, and deals with buyers personally.</p>
+  </aside>
+</div></section>
+
+<section id="mission" class="mv"><div class="wrap">
+  <h2 class="t">Our mission and vision</h2>
+  <p class="intro">What we do every day, and where we are going.</p>
+  <div class="mvg">
+    <div class="panel"><small>Mission</small><h3>Quality without compromise</h3><p>To supply premium curcumin 95% extract with integrity and uncompromising quality, backed by excellent, smooth service and clear communication, and to serve every client according to their needs.</p></div>
+    <div class="panel"><small>Vision</small><h3>India's name, worldwide</h3><p>To become the largest and most trusted supplier of curcumin 95% extract in North America, Europe and East Asia, and to make India proud as the origin of this ingredient.</p></div>
+  </div>
+</div></section>
+
 <section id="contact" class="dark"><div class="wrap contact">
   <div class="info">
     <h2 class="t">Request a quote</h2>
@@ -238,7 +288,7 @@ document.getElementById("f").addEventListener("submit",function(e){
 
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll(".card,.step,.routes,.cap").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+document.querySelectorAll(".card,.step,.routes,.cap,.val,.fcard,.panel").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
 var meter=document.getElementById("meter"),pct=document.getElementById("pct");
 setTimeout(function(){meter.classList.add("go");if(rm){pct.textContent="95%";return}var t0=null;(function f(t){t0=t0||t;var k=Math.min((t-t0)/1800,1);pct.textContent=Math.round(95*(1-Math.pow(1-k,3)))+"%";if(k<1)requestAnimationFrame(f)})(performance.now())},500);
 var top_=document.querySelector(".top"),pr=document.getElementById("prog");
