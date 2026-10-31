@@ -59,6 +59,13 @@ section h2.t{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--green);margin-bott
 .fcard h3{font-size:1.5rem;color:var(--white)}
 .fcard small{display:block;color:var(--gold2);font-weight:500;margin:.2rem 0 1rem}
 .fcard p{margin:0 0 .8rem;font-size:.98rem;line-height:1.6;max-width:none}
+.fd{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem}
+.box{background:var(--mist);border-top:4px solid var(--gold);padding:1.8rem;border-radius:4px}
+.box h3{font-size:1.4rem;color:var(--green);margin-bottom:1rem}
+.box ul{list-style:none;margin:0;padding:0}
+.box li{position:relative;padding-left:1.5rem;margin-bottom:.75rem;color:var(--text);font-size:1rem;line-height:1.6}
+.box li:before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.box li b{color:var(--green)}
 .mv{background:var(--black);color:var(--white)}
 .mv h2.t{color:var(--gold2)}
 .mvg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -136,7 +143,7 @@ select option{background:#161c18;color:#fff}
 .cap{margin:1rem 0 0;color:var(--muted);font-size:.95rem}
 .wa{position:fixed;right:1.1rem;bottom:1.1rem;z-index:6;background:#25a35a;color:#fff;text-decoration:none;font-weight:700;padding:.75rem 1.2rem;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .25s}
 .wa:hover{transform:translateY(-3px) scale(1.04)}
-@media(max-width:860px){.c3{grid-template-columns:1fr 1fr}.about,.mvg{grid-template-columns:1fr}.about{gap:2rem}}
+@media(max-width:860px){.c3{grid-template-columns:1fr 1fr}.about,.mvg,.fd{grid-template-columns:1fr}.about{gap:2rem}}
 @media(max-width:560px){.vals{grid-template-columns:1fr}}
 @media(max-width:560px){.c3{grid-template-columns:1fr}}
 @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}.steps:before{display:none}.mol{opacity:.12}}
@@ -243,6 +250,20 @@ select option{background:#161c18;color:#fff}
     <p>Before founding Hanum Trade, he worked in data engineering for a pharmaceutical client, where he saw how seriously the industry treats quality, compliance and documentation.</p>
     <p>He brings that discipline and a systems mindset to every order, from first enquiry to shipment, and deals with buyers personally.</p>
   </aside>
+</div>
+<div class="wrap fd">
+  <div class="box"><h3>Leadership and responsibility</h3><ul>
+    <li><b>Founder and owner.</b> Responsible for every order, from first enquiry to shipment, along with quotations, documentation and buyer relationships.</li>
+    <li><b>Elected student representative.</b> Served as Graduate Student Senator for the Engineering Graduate Student Society at the University of Maryland, speaking for master's students in the A. James Clark School of Engineering.</li>
+    <li><b>Teaching leadership.</b> Graduate Teaching Assistant at the University of Maryland, running lab sessions and guiding students in databases and in digital forensics and incident response.</li>
+    <li><b>Discipline and service.</b> Completed National Cadet Corps (India) training in leadership and teamwork, with 50+ hours of community service.</li>
+  </ul></div>
+  <div class="box"><h3>Technical background</h3><ul>
+    <li><b>Software and cloud engineering.</b> Master's in Software Engineering, with coursework in cloud security, secure coding and information assurance.</li>
+    <li><b>Data engineering for pharma.</b> Built and ran data pipelines and cloud data migrations for a pharmaceutical client, with attention to data security and compliance standards such as HIPAA and GDPR.</li>
+    <li><b>Data science.</b> Graduate certificate in Data Science, with hands-on work in Python, SQL and machine learning.</li>
+    <li><b>Systems thinking in trade.</b> Applies the same careful, process-driven approach to specifications, documentation and order tracking, and built this website and enquiry process himself.</li>
+  </ul></div>
 </div></section>
 
 <section id="mission" class="mv"><div class="wrap">
@@ -288,7 +309,7 @@ document.getElementById("f").addEventListener("submit",function(e){
 
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll(".card,.step,.routes,.cap,.val,.fcard,.panel").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+document.querySelectorAll(".card,.step,.routes,.cap,.val,.fcard,.panel,.box").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
 var meter=document.getElementById("meter"),pct=document.getElementById("pct");
 setTimeout(function(){meter.classList.add("go");if(rm){pct.textContent="95%";return}var t0=null;(function f(t){t0=t0||t;var k=Math.min((t-t0)/1800,1);pct.textContent=Math.round(95*(1-Math.pow(1-k,3)))+"%";if(k<1)requestAnimationFrame(f)})(performance.now())},500);
 var top_=document.querySelector(".top"),pr=document.getElementById("prog");
