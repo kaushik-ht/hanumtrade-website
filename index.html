@@ -61,6 +61,19 @@ nav a:hover{color:var(--gold2)}
 section{padding:5rem 0}
 section h2.t{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--green);margin-bottom:.8rem}
 .intro{max-width:60ch;color:var(--muted);margin:0 0 2.5rem}
+.certs{background:var(--green);color:var(--white)}
+.certs h2.t{color:var(--gold2)}.certs .intro{color:#cfe0d5;margin-bottom:1rem}
+.gl{color:var(--gold2);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:2.2rem 0 1rem}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:1.2rem}
+.cc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-top:3px solid var(--gold);border-radius:4px;padding:1.4rem;transition:transform .25s,background .25s}
+.cc:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.cc svg.bd{width:64px;height:64px;margin-bottom:.8rem;display:block}
+.bd .o{fill:rgba(0,0,0,.22);stroke:var(--gold);stroke-width:1.8}
+.bd .i{fill:none;stroke:var(--gold);stroke-width:.7;opacity:.55;stroke-dasharray:2 2.4}
+.bd text{fill:var(--gold2);font:700 10.5px Manrope,sans-serif;text-anchor:middle;letter-spacing:.02em}
+.cc h4{font:700 1.12rem Fraunces,Georgia,serif;margin:0 0 .35rem;color:var(--white)}
+.cc p{margin:0;font-size:.95rem;color:#cfe0d5;line-height:1.55}
+.cn{margin:1.8rem 0 0;font-size:.95rem;color:#b9cfc1;max-width:70ch}
 .about{display:grid;grid-template-columns:1.2fr .8fr;gap:3.5rem;align-items:start}
 .about p{margin:0 0 1.1rem;max-width:62ch}
 .vals{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
@@ -169,7 +182,7 @@ select option{background:#161c18;color:#fff}
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="#top" aria-label="Hanum Trade home"><img src="logo.png?v=4" alt="" onerror="this.style.display='none'">Hanum<b>Trade</b></a>
-  <nav aria-label="Main"><a href="#product">Product</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a href="#about">About</a><a class="cta" href="#contact">Request a quote</a></nav>
+  <nav aria-label="Main"><a href="#product">Product</a><a href="#quality">Quality</a><a href="#markets">Markets</a><a href="#customers">Customers</a><a href="#about">About</a><a class="cta" href="#contact">Request a quote</a></nav>
 </div><div class="prog" id="prog"></div></header>
 
 <main id="top">
@@ -214,6 +227,25 @@ select option{background:#161c18;color:#fff}
     <div class="step"><b>3</b><h3>Confirm the order</h3><p>Agree terms, packing and schedule.</p></div>
     <div class="step"><b>4</b><h3>Shipment</h3><p>Export dispatch from India to you.</p></div>
   </div>
+</div></section>
+
+<section id="quality" class="certs"><div class="wrap">
+  <h2 class="t">Certified manufacturing partners</h2>
+  <p class="intro">Hanum Trade is a merchant exporter. We work only with manufacturers that hold recognised food-safety and quality certifications, so every order comes from a facility built to international standards.</p>
+  <div class="gl">Facility-level certifications</div>
+  <div class="cg">
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="29">FDA</text><text x="32" y="43">FEI</text></svg><h4>US FDA Food Facility Registration</h4><p>Registered facilities with a valid FEI number.</p></div>
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="37">cGMP</text></svg><h4>cGMP compliance</h4><p>NSF-GMP, USP, or 21 CFR Part 111 compliance.</p></div>
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="29">FSSC</text><text x="32" y="43">BRCGS</text></svg><h4>FSSC 22000 or BRCGS</h4><p>Globally recognised food safety schemes, including the British Retail Consortium Global Standards.</p></div>
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="29">ISO</text><text x="32" y="43">22000</text></svg><h4>ISO 22000</h4><p>Food Safety Management System certification.</p></div>
+  </div>
+  <div class="gl">Market-driven certifications</div>
+  <div class="cg">
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="37">KOSHER</text></svg><h4>Kosher</h4><p>Certification for kosher-observant markets and customers.</p></div>
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="37">HALAL</text></svg><h4>Halal</h4><p>Certification for halal markets and customers.</p></div>
+    <div class="cc"><svg class="bd" viewBox="0 0 64 64" aria-hidden="true"><circle class="o" cx="32" cy="32" r="30"/><circle class="i" cx="32" cy="32" r="25"/><text x="32" y="29">NON-</text><text x="32" y="43">GMO</text></svg><h4>Non-GMO Project Verified</h4><p>Third-party verification to the Non-GMO Project Standard.</p></div>
+  </div>
+  <p class="cn">The certifications that apply depend on the manufacturing partner for your order. Tell us what your market requires and we will share the relevant certificates with your quote.</p>
 </div></section>
 
 <section id="markets" class="alt"><div class="wrap">
@@ -322,7 +354,7 @@ document.getElementById("f").addEventListener("submit",function(e){
 
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
-document.querySelectorAll(".card,.step,.routes,.cap,.val,.fcard,.panel,.box").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+document.querySelectorAll(".card,.step,.routes,.cap,.val,.fcard,.panel,.box,.cc").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
 var meter=document.getElementById("meter"),pct=document.getElementById("pct");
 setTimeout(function(){meter.classList.add("go");if(rm){pct.textContent="95%";return}var t0=null;(function f(t){t0=t0||t;var k=Math.min((t-t0)/1800,1);pct.textContent=Math.round(95*(1-Math.pow(1-k,3)))+"%";if(k<1)requestAnimationFrame(f)})(performance.now())},500);
 var top_=document.querySelector(".top"),pr=document.getElementById("prog");
